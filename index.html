@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      .container {
+        display: flex;
+        overflow-x: scroll;
+        padding: 24px;
+        width: 300px;
+        scroll-snap-type: x mandatory;
+        scroll-padding: 24px;
+        border-radius: 8px;
+        gap: 12px;
+      }
+      .container .item {
+        flex: 0 0 100%;
+        padding: 24px;
+        border-radius: 8px;
+        scroll-snap-align: start;
+      }
+      .pembuka {
+        text-align: center;
+        margin: 40px;
+        font-size: 20px;
+      }
+      .item {
+        border: 1px solid;
+      }
+      .swipe {
+        margin-left: 59%;
+        font-size: 13px;
+      }
+      .btn-tolak {
+        cursor: pointer;
+        border: none;
+        background-color: blueviolet;
+        border-radius: 10px;
+        color: white;
+        width: 30%;
+        height: 30%;
+        margin-left: 30px;
+      }
+      .btn-ya {
+        cursor: pointer;
+        border: none;
+        border-radius: 10px;
+        background-color: blueviolet;
+        color: white;
+        width: 30%;
+        height: 30%;
+        margin-left: 10px;
+        margin-right: 30px;
+      }
+      .ask {
+        text-align: center;
+        margin-top: 50px;
+      }
+    </style>
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="item" style="background-color: purple; color: white">
+        <p class="pembuka" id="greet">Hai Hasianku Termanis</p>
+        <p class="swipe">Swipe Kanan</p>
+      </div>
+      <div class="item" style="background-color: blue; color: white">
+        <p>Meski Banyak Bunga Di Taman</p>
+        <p>Bunga Anggrek Ku Pilih</p>
+        <p>Meski Banyak Wanita Lain</p>
+        <p>Hanya Kamu Yang Aku Pilih</p>
+      </div>
+      <div class="item" style="background-color: khaki; color: white">
+        <p>Buah Salak Baru Di Petik</p>
+        <p>Buah Duku Buah Delima</p>
+        <p>Ada Banyak Wanita Cantik</p>
+        <p>Cuman Enjelina Silaban Yang Ku Cinta</p>
+      </div>
+      <div class="item" style="background-color: peachpuff; color: white">
+        <p class="ask">Apakah Kamu Sayang Aku ?</p>
+        <button class="btn-tolak" onclick="tolak()">Tidak !</button>
+        <button class="btn-ya" onclick="terima()">Iya</button>
+      </div>
+    </div>
+    <script type="text/javascript">
+      function terima() {
+        alert("Makasih Ya Sudah Memilih Jawaban Ya Mau");
+        location.replace(
+          "https://wa.me/6282360984623? text=Iya%20Jesaya%20Aku%20Sayang%20Sama%20Kamu%20Dan%20Aku%20Juga%20Mau%20Bersamamu%20"
+        );
+      }
+      function tolak() {
+        alert("Terimakasih Ya Semoga Harimu Menyenangkan");
+        location.replace(
+          "https://wa.me/6282360984623? text=maaf%20Tidak%20Mau%20Jadi%20Pacar%20Kamu%20"
+        );
+      }
+    </script>
+  </body>
+</html>
